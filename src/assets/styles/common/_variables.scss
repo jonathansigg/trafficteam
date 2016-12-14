@@ -16,7 +16,11 @@ $multiple-grid: (
 $enable-multi-grid:     true;
 
 // Colors
-$brand-primary:         #00af50;
+$brand-light:           #f9f9f9;
+$body-color:            #636363;
+$body-color-lighter:    #c1bdaf;
+
+$brand-primary:         $body-color; //old #00af50
 $gray-base:             #000;
 $gray-darker:           lighten($gray-base, 13.5%);
 $gray-light:            lighten($gray-base, 46.7%);
@@ -25,8 +29,13 @@ $overlay-background:    rgba($gray-darker,.95);
 $flyout-background:     $gray-lighter;
 
 
+$brand-contact:         #E14C60;
+$brand-contact-darker:  #A1051B;
+$contact-gradient:      linear-gradient(to right, $brand-contact 0%,$brand-contact-darker 100%);
+
 // fontsize
 //$font-size-base:        16px;
+$font-family-sans-serif:  'Roboto', sans-serif;
 
 // transition
 $transition:            ease-in-out;
@@ -35,8 +44,18 @@ $animation-base:        $transition-speed $transition;
 $animation-fast:        ($transition-speed / 2) $transition;
 $animation-slow:        ($transition-speed * 2) $transition;
 
+$border-radius:         0;
+
 // dimensions
 $grid-padding:              15px;
 $spinner-width:             80px;
 $spinner-height:            80px;
-$content-wrapper-padding:   15px;
+$content-wrapper-padding:   2rem;
+
+$space:                     1rem;
+
+$container-maxwidth:        1280px;
+$container-small-maxwidth:  800px;
+
+$background-image-height:   450px;
+$header-image-height:       450px;

@@ -1,0 +1,13 @@
+.main-header {
+  .nav-bar {
+    background-color: $brand-light;
+  }
+  .nav-link {
+    color: #000;
+    font-weight: 700;
+    line-height: 2;
+    &.active {
+      color: $body-color-lighter;
+    }
+  }
+}

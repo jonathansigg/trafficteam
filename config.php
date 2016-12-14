@@ -3,7 +3,7 @@
 
 // path
 $app_dir = 'app/';
-$pagetitle = 'Proto Default';
+$pagetitle = 'Traffic Team';
 
 // include app
 require_once( $app_dir . 'prototype.init.php' );

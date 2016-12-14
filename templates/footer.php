@@ -1,41 +1,55 @@
-</div> <!-- Container ends here -->
+</main> <!-- Container ends here -->
 <footer class="main-footer">
-  <section class="container">
+  <section class="container-fluid">
     <div class="content-wrapper">
-      <h3>Some Footer Content</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-      </p>
-    </div>
-  </section>
-  <div class="container-fluid">
-    <div class="content-wrapper">
-      <h2>Footer</h2>
-      <div class="row">
+      <div class="row text-xs-center text-md-left">
         <div class="col-xs-12 col-md-4">
-          <ul class="nav nav-pills nav-stacked">
-            <li class="nav-item"><a class="nav-link" href="#">LINK</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">LINK</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">LINK</a></li>
-          </ul>
+          <h4>Folge uns!</h4>
+          <div class="form-group">
+            <ul class="nav nav-stacked">
+              <li class="nav-item"><a class="nav-link" href="#">Facebook.com</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Instagram</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Twitter</a></li>
+            </ul>
+          </div>
         </div>
         <div class="col-xs-12 col-md-4">
-          <ul class="nav nav-pills nav-stacked">
-            <li class="nav-item"><a class="nav-link" href="#">LINK</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">LINK</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">LINK</a></li>
-          </ul>
+          <h4>Kontakt</h4>
+          <div class="form-group">
+            <ul class="nav nav-stacked">
+              <li class="nav-item"><span class="nav-link">TraffTeam GmbH</span></li>
+              <li class="nav-item"><span class="nav-link">Bahnhofstrasse 1</span></li>
+              <li class="nav-item"><span class="nav-link">4593 Laufen</span></li>
+            </ul>
+          </div>
         </div>
         <div class="col-xs-12 col-md-4">
-          <ul class="nav nav-pills nav-stacked">
-            <li class="nav-item"><a class="nav-link" href="#">LINK</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">LINK</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">LINK</a></li>
-          </ul>
+          <h4>Links</h4>
+          <div class="form-group">
+            <ul class="nav nav-stacked">
+              <li class="nav-item"><a class="nav-link" href="#">www.goenner1.ch</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">www.goenner2.ch</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">www.goenner3.ch</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+  <section class="darker-background">
+    <div class="container-fluid">
+      <div class="content-wrapper-small">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            &copy; 2016, TrafficTeam GmbH
+          </div>
+          <div class="col-xs-12 col-sm-6 text-sm-right">
+            <a href="#">Impressum</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </footer>
 <?php render_scripts('footer'); ?>
 <script>
