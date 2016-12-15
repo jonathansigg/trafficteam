@@ -47,6 +47,12 @@
       &.hover-box {
         transition: all $animation-base;
         cursor: pointer;
+        &.image-box {
+          &:hover {
+            background: $brand-light;
+            color: $body-color;
+          }
+        }
         &:hover {
           background: $body-color-lighter;
           color: #FFF;
