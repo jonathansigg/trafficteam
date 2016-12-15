@@ -1,0 +1,242 @@
+// container fluid
+.container-fluid {
+  max-width: $container-maxwidth;
+}
+.small-container {
+  max-width: $container-small-maxwidth;
+}
+
+
+// boxes
+.box-row {
+  margin-bottom: -#{$space};
+  padding-top: $space;
+  & > [class*=col-] {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: $space;
+    & > .box {
+      color: $body-color-lighter;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 0px 15px -4px rgba(#000,0.3);
+      padding: $space;
+      position: relative;
+      &.hover-box {
+        transition: all $animation-base;
+        cursor: pointer;
+        &:hover {
+          background: $body-color-lighter;
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+a.fulllink {
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.icon-wrapper {
+  margin-bottom: $space;
+}
+
+.background-image {
+  height: $background-image-height;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &.overlay {
+    color: #FFF;
+    a { color: #FFF;
+      &:hover {
+        color: darken(#FFF,10%);
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0; right: 0; left: 0; bottom: 0;
+      opacity: .5;
+      background: #000;
+      background: linear-gradient(to bottom, rgba(#000,0) 0%,#000 100%);
+      z-index: 0;
+    }
+  }
+  .background-text {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    padding: 0 #{($space * 2)};
+    transform: translateY(-50%);
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+}
+
+.event-tipp-sticker {
+  background: $brand-contact;
+  position: absolute;
+  padding: 0 $space;
+  width: 110px;
+  height: 110px;
+  border-radius: 90px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1;
+  padding-top: 1.6rem;
+  transform: rotate(-34deg);
+  box-shadow: 0px 0px 84px -22px rgba(0,0,0,0.75);
+  text-shadow: 0px 0px 5px rgba(150, 150, 150, 1);
+  left: -#{($space * 2)};
+  top: -#{($space * 2)};
+  .text1 {
+    font-size: 1.6rem;
+  }
+  .text2 {
+    font-size: 2.3rem;
+  }
+}
+
+.background-height {
+  height: $background-image-height;
+}
+
+.center-items {
+  align-items: center;
+}
+
+.header-image {
+  height: $header-image-height;
+  position: relative;
+  .header-text-wrapper {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    .header-text {
+      max-width: $container-maxwidth;
+      padding: $space;
+      color: #FFF;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+.partner-logo {
+  width: 300px;
+  height: auto;
+  max-width: 100%;
+}
+
+.image-wrapper {
+  padding-top: $space;
+}
+
+.content-padding {
+  padding: 0 #{($space * 2)};
+}
+
+.contact-box {
+  background: $brand-contact;
+  background: $contact-gradient;
+  color: #FFF;
+  text-align: left;
+  position: absolute;
+  top: -#{($space * 2)};
+  right: 0;
+  padding: 0;
+  .toggler {
+    padding: $space #{($space + 0.3rem)};
+    cursor: pointer;
+  }
+  .contact-content {
+    padding: $space 0 0;
+    display: none;
+    width: 100%;
+  }
+  .contact-us {
+    position: relative;
+    top: -6px;
+    margin-left: 10px;
+    display: none;
+  }
+  &.show {
+    .toggler { padding: 0; }
+    padding: $space $space 0;
+    .contact-content, .contact-us {
+      display: inline-block;
+    }
+  }
+}
+
+.tt-pay {
+  position: relative;
+  height: 500px;
+  background: linear-gradient(to bottom, $brand-light 0%,$body-color-lighter 100%);
+  overflow: hidden;
+  .iphone {
+    background-image: url(../images/iphone.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-position: top right;
+  }
+  .wrapper {
+    position: absolute;
+    width: 100%;
+    overflow: visible;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+}
+
+.item-wrapper {
+  display: table;
+  margin: 0 -#{$space-small} -#{$space-small};
+  .item {
+    display: table-cell;
+    padding: 0 $space-small $space-small
+  }
+}
+
+.map {
+  iframe {
+    width: 100%;
+    height: $map-height;
+  }
+}
+
+@media (max-width: breakpoint-max('lg', $grid-breakpoints) ) {
+  .tt-pay {
+    .iphone {
+      background-position: top right -230px;
+    }
+  }
+}
+
+@media (max-width: breakpoint-max('md', $grid-breakpoints) ) {
+  .event-tipp-sticker {
+    left: $space;
+    top: $space;
+  }
+
+  .item-wrapper {
+    display: block;
+    .item {
+      display: inline-block;
+    }
+  }
+}

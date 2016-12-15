@@ -1,0 +1,21 @@
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px -4px 13px 4px rgba(0,0,0,0.75);
+  .nav-bar {
+    background-color: $brand-light;
+  }
+  .nav-link {
+    color: #000;
+    font-weight: 700;
+    line-height: 2;
+    &.active {
+      color: $body-color-lighter;
+    }
+  }
+}
+
+body {
+  padding-top: $header-height;
+}

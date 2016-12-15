@@ -1,0 +1,52 @@
+.fade { visibility: hidden; transition: visibility $animation-base, opacity $animation-base; }
+.fade.in { visibility: visible; }
+
+// content wrapper
+.content-wrapper { padding: $content-wrapper-padding 0;
+  &-small {
+    padding: #{($content-wrapper-padding / 2)} 0;
+  }
+}
+
+// disable outline on links and buttons
+a:focus, button:focus { outline: none !important; }
+
+.text {
+  &-lighter {
+    color: $body-color-lighter;
+  }
+}
+
+strong.lead {
+  font-weight: 700;
+}
+
+.white-background {
+  background-color: #FFF;
+}
+
+.darker-background {
+  color: #FFF;
+  background: $body-color-lighter;
+  a {
+    color: #FFF;
+    &:hover {
+      color: darken(#FFF,10%);
+    }
+  }
+}
+
+body {
+  background: $brand-light;
+}
+
+a {
+  text-decoration: none;
+  transition: all $animation-base;
+}
+
+@for $i from 1 through 6 {
+  h#{$i}, .h#{$i} {
+    font-weight: 700;
+  }
+}

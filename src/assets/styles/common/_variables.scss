@@ -1,0 +1,67 @@
+// all font path
+$icon-font-path:        "../fonts/";
+$image-path:            "../images/";
+
+// Grid settings
+$grid-columns:          12;
+
+// flexbox
+$enable-flex:           true !default;
+
+// multiple grid
+$multiple-grid: (
+  columns_1: 16,
+  columns_2: 20
+);
+$enable-multi-grid:     true;
+
+// Colors
+$brand-light:           #f9f9f9;
+$body-color:            #636363;
+$body-color-lighter:    #c1bdaf;
+
+$brand-primary:         $body-color; //old #00af50
+$gray-base:             #000;
+$gray-darker:           lighten($gray-base, 13.5%);
+$gray-light:            lighten($gray-base, 46.7%);
+$gray-lighter:          lighten($gray-base, 93.5%);
+$overlay-background:    rgba($gray-darker,.95);
+$flyout-background:     $gray-lighter;
+
+
+$brand-contact:         #E14C60;
+$brand-contact-darker:  #A1051B;
+$contact-gradient:      linear-gradient(to right, $brand-contact 0%,$brand-contact-darker 100%);
+
+// fontsize
+//$font-size-base:        16px;
+$font-family-sans-serif:  'Roboto', sans-serif;
+
+// transition
+$transition:            ease-in-out;
+$transition-speed:      400ms;
+$animation-base:        $transition-speed $transition;
+$animation-fast:        ($transition-speed / 2) $transition;
+$animation-slow:        ($transition-speed * 2) $transition;
+
+$border-radius:         0;
+
+// dimensions
+$grid-padding:              15px;
+$spinner-width:             80px;
+$spinner-height:            80px;
+$content-wrapper-padding:   2rem;
+
+$space:                     1rem;
+$space-small:               $space / 2;
+$space-big:                 $space * 2;
+
+$container-maxwidth:        1280px;
+$container-small-maxwidth:  800px;
+
+$background-image-height:   450px;
+$header-image-height:       450px;
+
+$map-height:                450px;
+
+$header-height:             49px;
