@@ -6,6 +6,11 @@
           <a href="#" title="Trafficteam"><img alt="Logo Trafficteam" src="<?= get_dir('images') ?>logo.jpg"></a>
         </div>
         <div class="col-xs-8 text-xs-right">
+          <div class="hamburger hamburger--spin hidden-md-up">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
           <nav class="nav nav-inline">
             <a class="nav-link<?= template() == 'home' ? ' active' : '' ?>" href="?page=home">Home</a>
             <a class="nav-link<?= template() == 'dienstleistungen' ? ' active' : '' ?>" href="?page=dienstleistungen">Dientsleistung</a>

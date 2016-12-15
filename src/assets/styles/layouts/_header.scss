@@ -3,8 +3,13 @@
   top: 0;
   width: 100%;
   box-shadow: 0px -4px 13px 4px rgba(0,0,0,0.75);
+  z-index: 100;
   .nav-bar {
     background-color: $brand-light;
+  }
+  .hamburger {
+    padding: 0;
+    margin-top: 4px;
   }
   .nav-link {
     color: #000;
@@ -17,4 +22,32 @@
 }
 body {
   padding-top: $header-height;
+}
+
+@media (max-width: breakpoint-max('sm', $grid-breakpoints) ) {
+  .main-header {
+    .navbar .nav {
+      position: fixed;
+      top: -100%;
+      width: 100%;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all $animation-base;
+      padding: $space 0;
+      background: $brand-light;
+      .nav-link {
+        padding: $space;
+        text-align: left;
+        width: 100%;
+        display: block;
+        margin: 0;
+      }
+      &.active {
+        top: $header-height;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
 }
