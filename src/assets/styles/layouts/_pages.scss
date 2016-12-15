@@ -6,11 +6,15 @@
   max-width: $container-small-maxwidth;
 }
 
+.white-background { background: #FFF; }
 
 // boxes
 .box-row {
   margin-bottom: -#{$space};
   padding-top: $space;
+  .row {
+    flex-grow: 1;
+  }
   & > [class*=col-] {
     display: flex;
     flex-wrap: wrap;
@@ -23,6 +27,23 @@
       box-shadow: 0px 0px 15px -4px rgba(#000,0.3);
       padding: $space;
       position: relative;
+      background: $brand-light;
+      flex-grow: 1;
+      &.image-box {
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+          height: auto;
+          opacity: 1;
+          transition: opacity $animation-base;
+        }
+        &:hover {
+          background: $brand-light;
+          color: $body-color;
+          img { opacity: .8 }
+        }
+      }
       &.hover-box {
         transition: all $animation-base;
         cursor: pointer;
@@ -38,6 +59,7 @@
 a.fulllink {
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
+  z-index: 1;
 }
 
 .icon-wrapper {
@@ -110,6 +132,12 @@ a.fulllink {
 
 .center-items {
   align-items: center;
+  justify-content: center;
+  [class*=col-] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .header-image {
