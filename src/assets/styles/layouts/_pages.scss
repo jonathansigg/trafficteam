@@ -15,6 +15,10 @@
   .row {
     flex-grow: 1;
   }
+  .box-padding {
+    padding-top: $space;
+    padding-bottom: $space;
+  }
   & > [class*=col-] {
     display: flex;
     flex-wrap: wrap;
@@ -29,6 +33,10 @@
       position: relative;
       background: $brand-light;
       flex-grow: 1;
+      &.no-padding {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
       &.image-box {
         align-items: center;
         justify-content: center;
@@ -42,6 +50,15 @@
           background: $brand-light;
           color: $body-color;
           img { opacity: .8 }
+        }
+      }
+      &.box-normal {
+        color: $body-color;
+        a {
+          color: $body-color;
+          &:hover {
+            color: $brand-light;
+          }
         }
       }
       &.hover-box {
@@ -72,6 +89,10 @@ a.fulllink {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  &-event {
+    height: auto;
+    min-height: 150px;
+  }
   &.overlay {
     color: #FFF;
     a { color: #FFF;
