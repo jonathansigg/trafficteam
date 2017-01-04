@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -23,11 +24,11 @@
             </div>
           </div>
           <nav class="nav nav-inline">
-            <a class="nav-link" href="?page=home">Home</a>
-            <a class="nav-link active" href="?page=dienstleistungen">Dientsleistung</a>
-            <a class="nav-link" href="?page=events">Events</a>
-            <a class="nav-link" href="?page=ueber_uns">Über uns</a>
-            <a class="nav-link" href="?page=kontakt">Kontakt</a>
+            <a class="nav-link active" href="home.html">Home</a>
+            <a class="nav-link" href="dienstleistungen.html">Dientsleistung</a>
+            <a class="nav-link" href="events.html">Events</a>
+            <a class="nav-link" href="ueber_uns.html">Über uns</a>
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
           </nav>
         </div>
       </div>
@@ -36,14 +37,21 @@
 </header>
 <main class="main-container">
 
-<section class="header-image background-image" style="background-image: url(src/dist/images/header-image.jpg)"></section>
+<section class="header-image background-image overlay" style="background-image: url(src/dist/images/weihnachten.png)">
+  <div class="header-text-wrapper">
+    <div class="header-text">
+      <h1>Aprés-Ski Feeling zum Mieten</h1>
+      <span>besuchen Sie uns am Weihnachtsmarkt in Laufen</span>
+    </div>
+  </div>
+</section>
 
 <section class="container-fluid small-container">
   <div class="content-wrapper">
     <div class="text-xs-center">
-      <h2>Service von Profis aus der Region</h2>
+      <h2>Unsere Dienstleistungen</h2>
       <p>
-        Wir unterstützen die Lokale Wirtschaftund arbeiten Ausschliesslich wenn möglich mit Partnern aus nächster Nähe.
+        TrafficTeam istIhr lokaler Partner in verchiedensten Bereichen. Unsere Dienstlistungen im Überblick:
       </p>
       <div class="row box-row">
         <div class="col-xs-12 col-md-4">
@@ -86,45 +94,19 @@
 <section class="container-fluid">
   <div class="content-wrapper">
     <div class="text-xs-center row center-items white-background">
-      <div class="hidden-sm-down col-md-6 background-image" style="background-image: url(src/dist/images/kulisse.jpg)"></div>
-      <div class="col-xs-12 col-md-6 background-height">
-        <div class="content-wrapper">
-          <div class="icon-wrapper"><i class="fa fa-home fa-4x text-lighter" aria-hidden="true"></i></div>
-          <h4>Kulissenbau</h4>
-          <div class="text content-padding">
-            Vom Bühnenbild bis zum Messestand. Wir arbeiten mit lokalen Schweizern und Konstrukteuren und können Sie dadurch kompetent Beraten.
-          </div>
+      <div class="col-xs-12 col-md-6 background-image overlay" style="background-image: url(src/dist/images/bday.jpg)">
+        <div class="background-text">
+          <p>26.09.2016</p>
+          <h4>
+            "Traffic-Team feiert Geburtstag und wird 10 Jahre alt!"
+          </h4>
+          <a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div class="col-xs-12 col-md-6 background-height">
-        <div class="content-wrapper">
-          <div class="icon-wrapper"><i class="fa fa-calendar fa-4x text-lighter" aria-hidden="true"></i></div>
-          <h4>Veranstaltungstechnik</h4>
-          <div class="text content-padding">
-            Kontaktieren Sie uns für Ihren nächsten Event.<br>
-            Wir kümmern uns um Licht, Ton und alles was dazugehört.
-          </div>
-        </div>
-      </div>
-      <div class="hidden-sm-down col-md-6 background-image" style="background-image: url(src/dist/images/event.jpg)">
-        <div class="contact-box">
-          <div class="contact-header">
-            <i class="fa fa-info-circle fa-2x toggler" onclick="toggleContactbox(this)" aria-hidden="true"></i> <span class="contact-us">Kontaktieren Sie uns</span>
-          </div>
-          <div class="contact-content">
-            <p><a href="tel:0611234567" class="btn btn-secondary btn-block">Tel: 061 123 45 67</a></p>
-            <p><a href="mailto: info@trafficteam.ch" class="btn btn-secondary btn-block">Schreiben Sie uns</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="hidden-sm-down col-md-6 background-image" style="background-image: url(src/dist/images/pay.jpg)"></div>
-      <div class="col-xs-12 col-md-6 background-height">
-        <div class="content-wrapper">
-          <div class="icon-wrapper"><i class="fa fa-credit-card fa-4x text-lighter" aria-hidden="true"></i></div>
-          <h4>TT-Pay</h4>
-          <div class="text content-padding">
-            Bezahlen einfach wie nie! Benutzen Sie TT-Pay für Ihren nächsten Anlsass und vermeiden Sie unnötiges Kleingeldzählen an der Bar und Kasse. TT-Pay ist ab Sofort für Sie einsatzbereit.
-          </div>
+      <div class="col-xs-12 col-md-6 background-image" style="background-image: url(src/dist/images/eventtipp.jpg)">
+        <div class="event-tipp-sticker">
+          <span class="text1">Event</span><br>
+          <span class="text2">Tipp</span>
         </div>
       </div>
     </div>
@@ -136,6 +118,17 @@
     <h4>Kunden und Partner</h4>
     <div class="image-wrapper">
       <img src="src/dist/images/holzherr.gif" alt="Holzherr" class="partner-logo">
+    </div>
+  </div>
+</section>
+
+<section class="tt-pay">
+  <div class="iphone"></div>
+  <div class="wrapper">
+    <div class="container-fluid small-container">
+      <h2>TT-Pay</h2>
+      <p>Das sichere Bezahlsystem für Ihren Event</p>
+      <a class="btn btn-secondary" href="#">Mehr erfahren</a>
     </div>
   </div>
 </section>
@@ -192,27 +185,5 @@
     </div>
   </section>
 </footer>
-<script src="src/dist/scripts/main.js"></script><script>
-(function(b, o, i, l, e, r) {
-    b.GoogleAnalyticsObject = l;
-    b[l] || (b[l] =
-        function() {
-            (b[l].q = b[l].q || []).push(arguments)
-        });
-    b[l].l = +new Date;
-    e = o.createElement(i);
-    r = o.getElementsByTagName(i)[0];
-    e.src = 'https://www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e, r)
-}(window, document, 'script', 'ga'));
-ga('create', 'UA-XXXXX-X');
-ga('send', 'pageview');
-</script>
-  </body>
-</html>
-<html>
-  <head>
-      </head>
-  <body>
-      </body>
+<script src="src/dist/scripts/main.js"></script>  </body>
 </html>

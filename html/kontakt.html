@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -23,11 +24,11 @@
             </div>
           </div>
           <nav class="nav nav-inline">
-            <a class="nav-link" href="?page=home">Home</a>
-            <a class="nav-link active" href="?page=dienstleistungen">Dientsleistung</a>
-            <a class="nav-link" href="?page=events">Events</a>
-            <a class="nav-link" href="?page=ueber_uns">Über uns</a>
-            <a class="nav-link" href="?page=kontakt">Kontakt</a>
+            <a class="nav-link" href="home.html">Home</a>
+            <a class="nav-link" href="dienstleistungen.html">Dientsleistung</a>
+            <a class="nav-link" href="events.html">Events</a>
+            <a class="nav-link" href="ueber_uns.html">Über uns</a>
+            <a class="nav-link active" href="kontakt.html">Kontakt</a>
           </nav>
         </div>
       </div>
@@ -36,106 +37,243 @@
 </header>
 <main class="main-container">
 
-<section class="header-image background-image" style="background-image: url(src/dist/images/header-image.jpg)"></section>
+<section id="map"></section>
+<script>
+  function initMap() {
+    var center = {lat: 47.424715, lng: 7.546349};
+    var mapOptions = {
+      zoom: 16,
+      center: center,
+      styles: [
+          {
+              "featureType": "water",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#e9e9e9"
+                  },
+                  {
+                      "lightness": 17
+                  }
+              ]
+          },
+          {
+              "featureType": "landscape",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#f5f5f5"
+                  },
+                  {
+                      "lightness": 20
+                  }
+              ]
+          },
+          {
+              "featureType": "road.highway",
+              "elementType": "geometry.fill",
+              "stylers": [
+                  {
+                      "color": "#ffffff"
+                  },
+                  {
+                      "lightness": 17
+                  }
+              ]
+          },
+          {
+              "featureType": "road.highway",
+              "elementType": "geometry.stroke",
+              "stylers": [
+                  {
+                      "color": "#ffffff"
+                  },
+                  {
+                      "lightness": 29
+                  },
+                  {
+                      "weight": 0.2
+                  }
+              ]
+          },
+          {
+              "featureType": "road.arterial",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#ffffff"
+                  },
+                  {
+                      "lightness": 18
+                  }
+              ]
+          },
+          {
+              "featureType": "road.local",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#ffffff"
+                  },
+                  {
+                      "lightness": 16
+                  }
+              ]
+          },
+          {
+              "featureType": "poi",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#f5f5f5"
+                  },
+                  {
+                      "lightness": 21
+                  }
+              ]
+          },
+          {
+              "featureType": "poi.park",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#dedede"
+                  },
+                  {
+                      "lightness": 21
+                  }
+              ]
+          },
+          {
+              "elementType": "labels.text.stroke",
+              "stylers": [
+                  {
+                      "visibility": "on"
+                  },
+                  {
+                      "color": "#ffffff"
+                  },
+                  {
+                      "lightness": 16
+                  }
+              ]
+          },
+          {
+              "elementType": "labels.text.fill",
+              "stylers": [
+                  {
+                      "saturation": 36
+                  },
+                  {
+                      "color": "#333333"
+                  },
+                  {
+                      "lightness": 40
+                  }
+              ]
+          },
+          {
+              "elementType": "labels.icon",
+              "stylers": [
+                  {
+                      "visibility": "off"
+                  }
+              ]
+          },
+          {
+              "featureType": "transit",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#f2f2f2"
+                  },
+                  {
+                      "lightness": 19
+                  }
+              ]
+          },
+          {
+              "featureType": "administrative",
+              "elementType": "geometry.fill",
+              "stylers": [
+                  {
+                      "color": "#fefefe"
+                  },
+                  {
+                      "lightness": 20
+                  }
+              ]
+          },
+          {
+              "featureType": "administrative",
+              "elementType": "geometry.stroke",
+              "stylers": [
+                  {
+                      "color": "#fefefe"
+                  },
+                  {
+                      "lightness": 17
+                  },
+                  {
+                      "weight": 1.2
+                  }
+              ]
+          }
+      ]
+    };
 
-<section class="container-fluid small-container">
-  <div class="content-wrapper">
-    <div class="text-xs-center">
-      <h2>Service von Profis aus der Region</h2>
-      <p>
-        Wir unterstützen die Lokale Wirtschaftund arbeiten Ausschliesslich wenn möglich mit Partnern aus nächster Nähe.
-      </p>
-      <div class="row box-row">
-        <div class="col-xs-12 col-md-4">
-          <div class="box hover-box text-xs-center">
-            <a href="#" class="fulllink"></a>
-            <div class="icon-wrapper"><i class="fa fa-home fa-4x" aria-hidden="true"></i></div>
-            <strong class="lead">Kulissenbau</strong>
-            <div class="text">
-              Vom Bühnenbild bis zum Messestand
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <div class="box hover-box text-xs-center">
-            <a href="#" class="fulllink"></a>
-            <div class="icon-wrapper"><i class="fa fa-calendar fa-4x" aria-hidden="true"></i></div>
-            <strong class="lead">Veranstaltungstechnik</strong>
-            <div class="text">
-              Wir sorgen fpr das richtige Equipment an Ihrem Event
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <div class="box hover-box text-xs-center">
-            <a href="#" class="fulllink"></a>
-            <div class="icon-wrapper"><i class="fa fa-credit-card fa-4x" aria-hidden="true"></i></div>
-            <strong class="lead">TT-Pay</strong>
-            <div class="text">
-              Ein Bezahlsystem auf Ihre Ansprüche geschnmieden
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    var mapElement = document.getElementById('map');
+    var map = new google.maps.Map(mapElement, mapOptions);
+    var marker = new google.maps.Marker({
+      position: center,
+      map: map,
+      title: 'Traffic Team - Sound + Light'
+    });
+  }
+</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2CpW7fkvH5rIHCnIkX82s20vrPt4TdzI&callback=initMap">
+</script>
 
 
-<!-- Sections -->
 <section class="container-fluid">
   <div class="content-wrapper">
-    <div class="text-xs-center row center-items white-background">
-      <div class="hidden-sm-down col-md-6 background-image" style="background-image: url(src/dist/images/kulisse.jpg)"></div>
-      <div class="col-xs-12 col-md-6 background-height">
-        <div class="content-wrapper">
-          <div class="icon-wrapper"><i class="fa fa-home fa-4x text-lighter" aria-hidden="true"></i></div>
-          <h4>Kulissenbau</h4>
-          <div class="text content-padding">
-            Vom Bühnenbild bis zum Messestand. Wir arbeiten mit lokalen Schweizern und Konstrukteuren und können Sie dadurch kompetent Beraten.
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-6 background-height">
-        <div class="content-wrapper">
-          <div class="icon-wrapper"><i class="fa fa-calendar fa-4x text-lighter" aria-hidden="true"></i></div>
-          <h4>Veranstaltungstechnik</h4>
-          <div class="text content-padding">
-            Kontaktieren Sie uns für Ihren nächsten Event.<br>
-            Wir kümmern uns um Licht, Ton und alles was dazugehört.
-          </div>
-        </div>
-      </div>
-      <div class="hidden-sm-down col-md-6 background-image" style="background-image: url(src/dist/images/event.jpg)">
-        <div class="contact-box">
-          <div class="contact-header">
-            <i class="fa fa-info-circle fa-2x toggler" onclick="toggleContactbox(this)" aria-hidden="true"></i> <span class="contact-us">Kontaktieren Sie uns</span>
-          </div>
-          <div class="contact-content">
-            <p><a href="tel:0611234567" class="btn btn-secondary btn-block">Tel: 061 123 45 67</a></p>
-            <p><a href="mailto: info@trafficteam.ch" class="btn btn-secondary btn-block">Schreiben Sie uns</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="hidden-sm-down col-md-6 background-image" style="background-image: url(src/dist/images/pay.jpg)"></div>
-      <div class="col-xs-12 col-md-6 background-height">
-        <div class="content-wrapper">
-          <div class="icon-wrapper"><i class="fa fa-credit-card fa-4x text-lighter" aria-hidden="true"></i></div>
-          <h4>TT-Pay</h4>
-          <div class="text content-padding">
-            Bezahlen einfach wie nie! Benutzen Sie TT-Pay für Ihren nächsten Anlsass und vermeiden Sie unnötiges Kleingeldzählen an der Bar und Kasse. TT-Pay ist ab Sofort für Sie einsatzbereit.
-          </div>
-        </div>
-      </div>
+    <div class="form-group">
+      <h1>Kontaktieren Sie uns</h1>
     </div>
-  </div>
-</section>
-
-<section class="container-fluid">
-  <div class="content-wrapper text-xs-center">
-    <h4>Kunden und Partner</h4>
-    <div class="image-wrapper">
-      <img src="src/dist/images/holzherr.gif" alt="Holzherr" class="partner-logo">
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <form action="?" methid="post">
+          <div class="form-group">
+            <input type="text" placeholder="Vorname" name="vorname" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Name" name="name" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="E-Mail" name="email" class="form-control">
+          </div>
+          <div class="form-group">
+            <textarea rows="5" placeholder="Ihre Nachricht" name="nachricht" class="form-control"></textarea>
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-primary" name="submit" value="Absenden">
+          </div>
+        </form>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="item-wrapper">
+          <div class="item">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+          </div>
+          <div class="item">
+            TrafficTeam - Sound & Light<br>
+            Postfach 153<br>
+            4277 Büsserach<br>
+            Schweiz
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -192,33 +330,5 @@
     </div>
   </section>
 </footer>
-<script src="src/dist/scripts/main.js"></script><script>
-(function(b, o, i, l, e, r) {
-    b.GoogleAnalyticsObject = l;
-    b[l] || (b[l] =
-        function() {
-            (b[l].q = b[l].q || []).push(arguments)
-        });
-    b[l].l = +new Date;
-    e = o.createElement(i);
-    r = o.getElementsByTagName(i)[0];
-    e.src = 'https://www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e, r)
-}(window, document, 'script', 'ga'));
-ga('create', 'UA-XXXXX-X');
-ga('send', 'pageview');
-</script>
-  </body>
-</html>
-<html>
-  <head>
-      </head>
-  <body>
-      </body>
-</html>
-<html>
-  <head>
-      </head>
-  <body>
-      </body>
+<script src="src/dist/scripts/main.js"></script>  </body>
 </html>

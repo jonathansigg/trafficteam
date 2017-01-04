@@ -4,9 +4,204 @@
   */
 ?>
 
-<section class="map">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2699.345646451235!2d7.544177716025648!3d47.424703179173044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791c4ffde080f31%3A0xfeb8e7eb066a69b0!2sTraffic+Team+-+Sound+%2B+Light!5e0!3m2!1sen!2sch!4v1481755818837" frameborder="0" style="border:0" allowfullscreen></iframe>
-</section>
+<section id="map"></section>
+<script>
+  function initMap() {
+    var center = {lat: 47.424715, lng: 7.546349};
+    var mapOptions = {
+      zoom: 16,
+      center: center,
+      styles: [
+          {
+              "featureType": "water",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#e9e9e9"
+                  },
+                  {
+                      "lightness": 17
+                  }
+              ]
+          },
+          {
+              "featureType": "landscape",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#f5f5f5"
+                  },
+                  {
+                      "lightness": 20
+                  }
+              ]
+          },
+          {
+              "featureType": "road.highway",
+              "elementType": "geometry.fill",
+              "stylers": [
+                  {
+                      "color": "#ffffff"
+                  },
+                  {
+                      "lightness": 17
+                  }
+              ]
+          },
+          {
+              "featureType": "road.highway",
+              "elementType": "geometry.stroke",
+              "stylers": [
+                  {
+                      "color": "#ffffff"
+                  },
+                  {
+                      "lightness": 29
+                  },
+                  {
+                      "weight": 0.2
+                  }
+              ]
+          },
+          {
+              "featureType": "road.arterial",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#ffffff"
+                  },
+                  {
+                      "lightness": 18
+                  }
+              ]
+          },
+          {
+              "featureType": "road.local",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#ffffff"
+                  },
+                  {
+                      "lightness": 16
+                  }
+              ]
+          },
+          {
+              "featureType": "poi",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#f5f5f5"
+                  },
+                  {
+                      "lightness": 21
+                  }
+              ]
+          },
+          {
+              "featureType": "poi.park",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#dedede"
+                  },
+                  {
+                      "lightness": 21
+                  }
+              ]
+          },
+          {
+              "elementType": "labels.text.stroke",
+              "stylers": [
+                  {
+                      "visibility": "on"
+                  },
+                  {
+                      "color": "#ffffff"
+                  },
+                  {
+                      "lightness": 16
+                  }
+              ]
+          },
+          {
+              "elementType": "labels.text.fill",
+              "stylers": [
+                  {
+                      "saturation": 36
+                  },
+                  {
+                      "color": "#333333"
+                  },
+                  {
+                      "lightness": 40
+                  }
+              ]
+          },
+          {
+              "elementType": "labels.icon",
+              "stylers": [
+                  {
+                      "visibility": "off"
+                  }
+              ]
+          },
+          {
+              "featureType": "transit",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#f2f2f2"
+                  },
+                  {
+                      "lightness": 19
+                  }
+              ]
+          },
+          {
+              "featureType": "administrative",
+              "elementType": "geometry.fill",
+              "stylers": [
+                  {
+                      "color": "#fefefe"
+                  },
+                  {
+                      "lightness": 20
+                  }
+              ]
+          },
+          {
+              "featureType": "administrative",
+              "elementType": "geometry.stroke",
+              "stylers": [
+                  {
+                      "color": "#fefefe"
+                  },
+                  {
+                      "lightness": 17
+                  },
+                  {
+                      "weight": 1.2
+                  }
+              ]
+          }
+      ]
+    };
+
+    var mapElement = document.getElementById('map');
+    var map = new google.maps.Map(mapElement, mapOptions);
+    var marker = new google.maps.Marker({
+      position: center,
+      map: map,
+      title: 'Traffic Team - Sound + Light'
+    });
+  }
+</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2CpW7fkvH5rIHCnIkX82s20vrPt4TdzI&callback=initMap">
+</script>
+
 
 <section class="container-fluid">
   <div class="content-wrapper">

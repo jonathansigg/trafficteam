@@ -16,7 +16,7 @@
       <div class="row box-row">
         <div class="col-xs-12 col-md-4">
           <div class="box hover-box text-xs-center">
-            <a href="#" class="fulllink"></a>
+            <a href="#kulissenbau" class="fulllink scrollto"></a>
             <div class="icon-wrapper"><i class="fa fa-home fa-4x" aria-hidden="true"></i></div>
             <strong class="lead">Kulissenbau</strong>
             <div class="text">
@@ -26,7 +26,7 @@
         </div>
         <div class="col-xs-12 col-md-4">
           <div class="box hover-box text-xs-center">
-            <a href="#" class="fulllink"></a>
+            <a href="#veranstaltungstechnik" class="fulllink scrollto"></a>
             <div class="icon-wrapper"><i class="fa fa-calendar fa-4x" aria-hidden="true"></i></div>
             <strong class="lead">Veranstaltungstechnik</strong>
             <div class="text">
@@ -36,7 +36,7 @@
         </div>
         <div class="col-xs-12 col-md-4">
           <div class="box hover-box text-xs-center">
-            <a href="#" class="fulllink"></a>
+            <a href="#ttpay" class="fulllink scrollto"></a>
             <div class="icon-wrapper"><i class="fa fa-credit-card fa-4x" aria-hidden="true"></i></div>
             <strong class="lead">TT-Pay</strong>
             <div class="text">
@@ -56,7 +56,7 @@
     <div class="text-xs-center row center-items white-background">
       <div class="hidden-sm-down col-md-6 background-image" style="background-image: url(<?= get_dir('images') ?>kulisse.jpg)"></div>
       <div class="col-xs-12 col-md-6 background-height">
-        <div class="content-wrapper">
+        <div id="kulissenbau" class="content-wrapper">
           <div class="icon-wrapper"><i class="fa fa-home fa-4x text-lighter" aria-hidden="true"></i></div>
           <h4>Kulissenbau</h4>
           <div class="text content-padding">
@@ -65,7 +65,7 @@
         </div>
       </div>
       <div class="col-xs-12 col-md-6 background-height">
-        <div class="content-wrapper">
+        <div id="veranstaltungstechnik" class="content-wrapper">
           <div class="icon-wrapper"><i class="fa fa-calendar fa-4x text-lighter" aria-hidden="true"></i></div>
           <h4>Veranstaltungstechnik</h4>
           <div class="text content-padding">
@@ -74,20 +74,10 @@
           </div>
         </div>
       </div>
-      <div class="hidden-sm-down col-md-6 background-image" style="background-image: url(<?= get_dir('images') ?>event.jpg)">
-        <div class="contact-box">
-          <div class="contact-header">
-            <i class="fa fa-info-circle fa-2x toggler" onclick="toggleContactbox(this)" aria-hidden="true"></i> <span class="contact-us">Kontaktieren Sie uns</span>
-          </div>
-          <div class="contact-content">
-            <p><a href="tel:0611234567" class="btn btn-secondary btn-block">Tel: 061 123 45 67</a></p>
-            <p><a href="mailto: info@trafficteam.ch" class="btn btn-secondary btn-block">Schreiben Sie uns</a></p>
-          </div>
-        </div>
-      </div>
+      <div class="hidden-sm-down col-md-6 background-image" style="background-image: url(<?= get_dir('images') ?>event.jpg)"></div>
       <div class="hidden-sm-down col-md-6 background-image" style="background-image: url(<?= get_dir('images') ?>pay.jpg)"></div>
       <div class="col-xs-12 col-md-6 background-height">
-        <div class="content-wrapper">
+        <div id="ttpay" class="content-wrapper">
           <div class="icon-wrapper"><i class="fa fa-credit-card fa-4x text-lighter" aria-hidden="true"></i></div>
           <h4>TT-Pay</h4>
           <div class="text content-padding">
@@ -107,3 +97,13 @@
     </div>
   </div>
 </section>
+
+<div class="contact-box">
+  <div class="contact-header">
+    <i class="fa fa-info-circle fa-2x toggler" onclick="toggleContactbox(this)" aria-hidden="true"></i> <span class="contact-us">Kontaktieren Sie uns</span>
+  </div>
+  <div class="contact-content">
+    <p><a href="tel:0611234567" class="btn btn-secondary btn-block">Tel: 061 123 45 67</a></p>
+    <p><a href="mailto: info@trafficteam.ch" class="btn btn-secondary btn-block">Schreiben Sie uns</a></p>
+  </div>
+</div>

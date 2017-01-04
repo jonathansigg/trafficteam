@@ -26,19 +26,19 @@
   <div class="content-wrapper">
     <div class="row box-row">
       <div class="col-xs-12 col-md-4">
-        <div class="box hover-box image-box">
+        <div class="box image-box">
           <a href="#" class="fulllink"></a>
           <img src="src/dist/images/holzherr.gif" alt="Holzherr">
         </div>
       </div>
       <div class="col-xs-12 col-md-4">
-        <div class="box hover-box image-box">
+        <div class="box image-box">
           <a href="#" class="fulllink"></a>
           <img src="src/dist/images/apple.png" alt="Apple">
         </div>
       </div>
       <div class="col-xs-12 col-md-4">
-        <div class="box hover-box image-box">
+        <div class="box image-box">
           <a href="#" class="fulllink"></a>
           <img src="src/dist/images/fedex.jpg" alt="FedEx">
         </div>

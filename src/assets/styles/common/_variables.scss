@@ -13,7 +13,7 @@ $multiple-grid: (
   columns_1: 16,
   columns_2: 20
 );
-$enable-multi-grid:     true;
+$enable-multi-grid:     false;
 
 // Colors
 $brand-light:           #f9f9f9;
@@ -57,7 +57,7 @@ $space-small:               $space / 2;
 $space-big:                 $space * 2;
 
 $container-maxwidth:        1280px;
-$container-small-maxwidth:  800px;
+$container-small-maxwidth:  900px;
 
 $background-image-height:   450px;
 $header-image-height:       450px;

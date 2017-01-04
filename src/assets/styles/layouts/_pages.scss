@@ -15,6 +15,9 @@
   .row {
     flex-grow: 1;
   }
+  .box-padding {
+    padding: $space-big $space;
+  }
   & > [class*=col-] {
     display: flex;
     flex-wrap: wrap;
@@ -29,6 +32,11 @@
       position: relative;
       background: $brand-light;
       flex-grow: 1;
+      margin-bottom: $space;
+      &.no-padding {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
       &.image-box {
         align-items: center;
         justify-content: center;
@@ -42,6 +50,15 @@
           background: $brand-light;
           color: $body-color;
           img { opacity: .8 }
+        }
+      }
+      &.box-normal {
+        color: $body-color;
+        a {
+          color: $body-color;
+          &:hover {
+            color: $brand-light;
+          }
         }
       }
       &.hover-box {
@@ -78,6 +95,10 @@ a.fulllink {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  &-event {
+    height: auto;
+    min-height: 150px !important;
+  }
   &.overlay {
     color: #FFF;
     a { color: #FFF;
@@ -132,6 +153,15 @@ a.fulllink {
   }
 }
 
+.event-tipp {
+  position: relative;
+  .event-tipp-sticker {
+    z-index: 1;
+    top: -#{($space-big * 1.5)};
+    left: -#{($space-big * 1.5)};
+  }
+}
+
 .background-height {
   height: $background-image-height;
 }
@@ -183,10 +213,11 @@ a.fulllink {
   background: $contact-gradient;
   color: #FFF;
   text-align: left;
-  position: absolute;
-  top: -#{($space * 2)};
+  position: fixed;
+  top: 50%;
   right: 0;
   padding: 0;
+  transform: translateY(-50%);
   .toggler {
     padding: $space #{($space + 0.3rem)};
     cursor: pointer;
@@ -246,17 +277,27 @@ a.fulllink {
   }
 }
 
-.map {
-  iframe {
-    width: 100%;
-    height: $map-height;
-  }
+#map {
+  height: $map-height;
+}
+
+.main-event {
+  margin-top: -5rem;
 }
 
 @media (max-width: breakpoint-max('lg', $grid-breakpoints) ) {
   .tt-pay {
     .iphone {
       background-position: top right -230px;
+    }
+  }
+}
+
+@media (max-width: 990px ) {
+  .event-tipp {
+    .event-tipp-sticker {
+      left: -#{$space * 0.8};
+      top: -#{$space-big * 2};
     }
   }
 }
@@ -268,9 +309,10 @@ a.fulllink {
   }
 
   .item-wrapper {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     .item {
-      display: inline-block;
+      display: flex;
     }
   }
 }

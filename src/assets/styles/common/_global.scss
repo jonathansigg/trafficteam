@@ -13,7 +13,7 @@ a:focus, button:focus { outline: none !important; }
 
 .text {
   &-lighter {
-    color: $body-color-lighter;
+    color: $body-color-lighter !important;
   }
 }
 

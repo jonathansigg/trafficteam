@@ -7,4 +7,12 @@ $(document).ready(function(){
   toggleContactbox = function(self) {
     $(self).parents('.contact-box').toggleClass('show');
   };
+
+  $('a.scrollto').click(function(e){
+    e.preventDefault();
+    var target = $($(this).attr('href'));
+    $('html, body').animate({
+        scrollTop: target.offset().top - $('.main-header').height() * 4
+    }, 1000);
+  });
 });
